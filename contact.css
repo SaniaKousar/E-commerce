@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+.navbar {
+  background: rgb(7, 113, 158);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  padding: 10px 10px;
+  height: 40px;
+  position: relative;
+}
+.logo img {
+  height: auto;
+  width: 80px;
+}
+.nav-links {
+  margin-right: 30px;
+  display: flex;
+  gap: 70px;
+  list-style: none;
+}
+.nav-links a {
+  font-weight: bold;
+  color: rgb(31, 31, 30);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: rgb(253, 252, 251);
+}
+.navbar li:hover {
+  transition: 0.3s ease;
+}
+
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+}
+
+/* Responsive Navbar*/
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: rgb(7, 113, 158);
+      width: 100%;
+      text-align: center;
+  }
+
+  .menu-icon {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+      display: flex;
+  }
+}
+
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  color: #423b3b;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.feed-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 90%; /* Adjusted for responsiveness */
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.feed-form input,
+.feed-form textarea {
+  width: 100%;
+  height: 54px;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #4B4B4B;
+}
+
+.feed-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.button_submit:hover, 
+.feed-form input:hover, 
+.feed-form textarea:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.button_submit {
+  width: 100%;
+  height: 54px;
+  font-size: 14px;
+  color: white;
+  background: rgb(0, 179, 255);
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
